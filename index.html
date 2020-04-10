@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+		<title>ElvenShop | Mask</title>
+		<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+	</head>
+	<body>
+		<div>
+			<!-- 在下面href里填入跳转的链接，第一个为第一个口罩的链接，target="_blank"为点击时新开窗口，如果不需要删除即可 -->
+			<a href="" target="_blank">
+				<img src="./mask1.gif" alt="" style="width: 100%;">
+			</a>
+			<a href="" target="_blank">
+				<img src="./mask2.gif" alt="" style="width: 100%;">
+			</a>
+		</div>
+		<div id="paypal-button-container"></div>
+
+	</body>
+	<!-- <script
+	    src="https://www.paypal.com/sdk/js?Afh38C89_3yc2_wKVujW7jksuGokZSg4AFyhuUKGMNjRxrM7ScofQmAiGmwqCvALDg8P8hg-l0wepDlo">
+	  </script> -->
+		<script>
+			function sf(){
+				paypal.Button.render({
+					env: 'sandbox',
+					client: {
+						sandbox: 'Afh38C89_3yc2_wKVujW7jksuGokZSg4AFyhuUKGMNjRxrM7ScofQmAiGmwqCvALDg8P8hg-l0wepDlo',
+						// production: clientId
+					},
+					locale: 'en_US',
+					style: {
+						size: 'medium',
+						color: 'white',
+						shape: 'pill',
+						label: 'paypal',
+						tagline: false
+					},
+					commit: true,
+					payment: function(data, actions) {},
+					onAuthorize: function(data, actions) {},
+					onCancel: function(data, actions) {}
+				},'#paypal-button-container');
+			}
+		    sf()
+		    // This function displays Smart Payment Buttons on your web page.
+		  </script>
+</html>
